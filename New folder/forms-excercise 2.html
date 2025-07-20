@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="description" content="forms for personal information">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+    <style>
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-row p {
+            margin: 0 10px 0 0;
+            min-width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+   <form> 
+        <h1>Personal details</h1>
+        <div class="form-row">
+            <p><b>First Name:</b></p>
+            <input type="text" name="first_name" placeholder="Enter your first name" required >
+        </div>
+        <div class="form-row">
+            <p><b>Last Name:</b></p>
+            <input type="text" name="last_name" placeholder="Enter your last name" required >
+        </div>
+        <div class="form-row">
+            <p><b>Email:</b></p>
+            <input type="email" name="email" placeholder="Enter your email" required >
+        </div>
+            <!-- Decide user's gender-->
+        <h3 class="sub">Select your gender</h3>
+        <input type="radio" name="gender" value="Male" >Male
+        <input type="radio" name="gender" value="Female" >Female
+         
+        <h2 class="sub">Magazines</h2>
+        <input type="checkbox" name="mag1" value="Stavenger Aftenblad" >Stavenger Aftenblad
+        <input type="checkbox" name="mag2" value="Teknisk Ukeblad" >Teknisk Ukeblad
+        <input type="checkbox" name="mag3" value="Se og Hør" >Se og Hør
+        <input type="checkbox" name="mag4" value="Familien" >Familien
+        <h2 class="sub">Subscribtion</h2>
+        <label for="Period"><b>Period:</b></label>
+        <div>
+            <select name="Period" id="Period" required>
+                <option value="6 months">6 months</option>
+                <option value="12 months">12 months</option>
+                <option value="24 months">24 months</option>
+           </select>
+        </div>
+
+        <input type="submit" value="subscribe">
+    </form>
+</body>
+</html>

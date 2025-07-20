@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        background-color: #f0f8ff; /* Light blue background */
+        color: black;
+    }
+    div{
+        color: black;
+    }
+    .square {
+        color: black;
+    }
+    
+    .highlight {
+        background-color: rgb(223, 223, 148);
+    }
+    .square:nth-child(odd) {
+    background-color: #ff3333; /* red */
+}
+    .square:nth-child(even) {
+    background-color: #0033cc; /* blue */
+}
+     #lucky7 {
+        background-color: #ffcc00; /* yellow */
+        color: white;}
+            /*.square:nth-child(7) {
+        color: white;}*/
+
+   .squares-container {
+  display: flex;
+  gap: 10px;
+}
+.square {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: black;
+            border: black 1px solid;
+            font-size: 16px;
+        }
+
+</style>
+</head>
+<body>
+
+   <div class="squares-container">
+   <div class="square">1</div>
+  <div class="square">2</div>
+  <div class="square">3</div>
+  <div class="square">4</div>
+  <div class="square">5</div>
+  <div class="square">6</div>
+  <div id="lucky7" class="square">7</div>
+  <div class="square">8</div>
+  <div class="square">9</div>
+  <div class="square">10</div>
+</div>
+
+</body>
+</html>

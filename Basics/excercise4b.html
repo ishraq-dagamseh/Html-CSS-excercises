@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+</head>
+<style>
+    .reversed_list {
+        li[value] {list-style-type:none; position:relative} /* Remove default list style */
+        li[value]::before {content:attr(value) '. ';/* Add custom numbering */
+        position:absolute; right:calc(100% + .33em);}/* Position the numbering */
+        /*reverse the order of the list items*/
+        display: flex;
+        flex-direction: column-reverse;
+    }
+</style>   
+
+<body>
+    <ul>   
+        <li>Apples</li>    
+        <li>Oranges</li>
+        
+
+        <ol type='i'>
+            <li >Orange A</li>
+            <li>Orange B</li>
+            <li>Orange C</li>
+            
+            <ol class="reversed_list" reversed start="z">
+                <li value="x">blue</li>
+                <li value="y">green</li>
+                <li value="z">red</li>
+            </ol>
+        </li>
+    </ul><li>Bananas</li></ul>
+    </ul>
+
+
+</body>
+</html>    

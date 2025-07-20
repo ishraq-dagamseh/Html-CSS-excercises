@@ -1,0 +1,51 @@
+ body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        background-color: #f0f8ff; /* Light blue background */
+    }
+    
+    h1 {
+        color: #333;
+    }
+    
+    h2 {
+        color: #555;
+    }
+    
+    p {
+        color: #666;
+    }
+    
+    div {
+        width:75%;
+        min-width: 500px; /* Minimum width of 500px */
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #333333;
+        border-radius: 10px;
+        box-shadow: #333 0px 5px 10px;
+    }
+   .red-text, .red-text h2, .red-text p {
+    color: red;
+}
+    .highlight {
+        background-color: rgb(223, 223, 148);
+    }
+   
+
+span{
+    background-color: #fdfd96; /* Light yellow background */
+        font-weight: bold;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+    
+    .red-text {
+        border: 1px dotted red;
+        color: red;
+    }
+    
+    .red-text h2, .red-text p {
+        color: red;
+    }

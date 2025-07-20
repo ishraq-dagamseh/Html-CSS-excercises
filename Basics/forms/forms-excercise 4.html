@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="description" content="forms for personal information">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription</title>
+</head>    
+    <style>
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-row p {
+            margin: 0 10px 0 0;
+            min-width: 80px;
+        }
+        .sub {
+            margin-top: 20px;
+            font-size: 1.2em;
+            border-bottom: 2px solid #333;
+            margin-bottom: 10px;
+        }
+        .form-section {
+            background-color: beige;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 60%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        fieldset {
+            border: 2px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: blanchedalmond;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        /*input[type="submit"] {
+            color: black;
+            background-color: beige;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }*/
+        
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 8px;
+            cursor: pointer;
+            accent-color: #333;
+        }
+        @media (max-width: 700px) {
+            .form-section {
+                width: 95%;
+                padding: 10px;
+            }
+            form {
+                max-width: 95vw;
+            }
+        }
+           
+    </style>
+
+
+</head>
+
+<body>
+   <form> 
+     
+        <fieldset>       
+            <legend><h2>Personal details</h2></legend>
+             <div class="form-row">
+            <p><b>First Name:</b></p>
+            <input type="text" name="first_name" placeholder="Enter your first name" required >
+        </div>
+        <div class="form-row">
+            <p><b>Last Name:</b></p>
+            <input type="text" name="last_name" placeholder="Enter your last name" required >
+        </div>
+        <div class="form-row">
+            <p><b>Email:</b></p>
+            <input type="email" name="email" placeholder="Enter your email" required >
+        </div>
+        <div  class="form-row">
+            <p><b> Gender: </b></p>
+            <input type="radio" name="gender" value="Male" >Male
+            <input type="radio" name="gender" value="Female" >Female
+        </div>
+        </fieldset>
+        <fieldset>
+
+            <legend><h2 class="sub">Magazines</h2></legend>
+            <div class="border-line">
+                <input type="checkbox" name="mag1" value="Stavenger Aftenblad" >Stavenger Aftenblad
+            </div>
+            <div class="border-line">
+                <input type="checkbox" name="mag2" value="Teknisk Ukeblad" >Teknisk Ukeblad
+            </div>
+            <div class="border-line">
+                <input type="checkbox" name="mag3" value="Se og Hør" >Se og Hør
+            </div>
+            <div class="border-line">
+                <input type="checkbox" name="mag4" value="Familien" >Familien
+            </div>  
+        </fieldset>
+        <fieldset>
+            <legend><h2 class="sub">Subscription</h2></legend>
+            <label for="Period"><b>Period:</b></label>
+                <select name="Period" id="Period" required>
+                    <option value="6 months">6 months</option>
+                <option value="12 months">12 months</option>
+                <option value="24 months">24 months</option>
+           </select>
+        </fieldset>
+
+        <input type="submit" value="subscribe">
+    </form>
+</body>
+</html>
+        <!--<h1>Personal details</h1>
+        <div class="form-section">
+            <div class="form-row">
+                <label for="first_name"><b>First Name:</b></label>
+                <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required >
+            </div>
+            <div class="form-row">
+                <label for="last_name"><b>Last Name:</b></label>
+                <input type="text" id="last_name" name="last_name" placeholder="Enter your last name" required >
+            </div>
+            <div class="form-row">
+                <label for="email"><b>Email:</b></label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required >
+            </div>
+        </div>
+        <div class="form-section">
+            <h3 class="sub">Select your gender</h3>
+            <input type="radio" id="male" name="gender" value="Male" >
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" >
+            <label for="female">Female</label>
+        </div>
+        <div class="form-section"> 
+           <h2 class="sub">Magazines</h2>
+           <input type="checkbox" id="mag1" name="mag1" value="Stavenger Aftenblad" >
+           <label for="mag1">Stavenger Aftenblad</label>
+           <input type="checkbox" id="mag2" name="mag2" value="Teknisk Ukeblad" >
+           <label for="mag2">Teknisk Ukeblad</label>
+           <input type="checkbox" id="mag3" name="mag3" value="Se og Hør" >
+           <label for="mag3">Se og Hør</label>
+           <input type="checkbox" id="mag4" name="mag4" value="Familien" >
+           <label for="mag4">Familien</label>
+        </div>
+        <div class="form-section">
+            <h2 class="sub">Subscription</h2>
+            <div class="border-line"></div>
+            <label for="Period"><b>Period:</b></label>
+            <div>
+                <select name="Period" id="Period" required>
+                    <option value="6 months">6 months</option>
+                    <option value="12 months">12 months</option>
+                    <option value="24 months">24 months</option>
+                </select>
+            </div>
+        </div>
+        <input type="submit" value="subscribe">
+    </form>
+</body>
+</html>
+-->
